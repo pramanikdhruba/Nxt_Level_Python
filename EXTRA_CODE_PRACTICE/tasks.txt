@@ -1,0 +1,4 @@
+Plan the project layout.
+Code the file handling module.
+Test the command line utility.
+Task Completed!

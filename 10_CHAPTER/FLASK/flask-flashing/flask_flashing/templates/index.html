@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+
+
+    Hey you just logged in!
+    <a href="/logout">Logout</a>
+</body>
+<script>
+// pip install Jinja2    for this syntax 
+
+// Jinja2 is a powerful and widely-used template engine for the Python programming language. It enables the creation of dynamic content by separating the presentation layer (templates) from the application logic. 
+// Key Features and Concepts:
+// Template Language:
+//      Jinja2 provides a distinct syntax for defining variables, control flow (like loops and conditional statements), and other template logic within text files, commonly used for HTML, XML, or other markup formats.
+// Delimiters:
+//      It uses specific delimiters to distinguish Jinja2 code from static content:
+//      {% ... %} for statements (e.g., for loops, if conditions).
+//      {{ ... }} for variables and expressions (to display dynamic data).
+//      {# ... #} for comments.
+{% with messages=get_flashed_messages(with_categories=True)  %}
+        {% if messages %}
+            {% for category, message in messages %} 
+                 alert('{{message}}')
+            {% endfor %}
+        {% endif %}
+    {% endwith %} 
+</script>
+
+</html>
